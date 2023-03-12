@@ -1,0 +1,39 @@
+extends ../../components/base/layout
+include ../../components/components
+
+block variables
+  - const title = "Название страницы"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+
+block main
+  main
+    +hero({
+      title: 'Заголовок блока',
+      description: 'Текстовое описание блока',
+      items: [{
+        title: '1 элемент блока',
+        subtitle: 'Подзаголовок №1',
+        text: 'Текстовое описание №1'
+      }, {
+        title: '2 элемент блока',
+        subtitle: 'Подзаголовок №2',
+        text: 'Текстовое описание №2'
+      }, {
+        title: '3 элемент блока',
+        subtitle: 'Подзаголовок №3',
+        text: 'Текстовое описание №3'
+      },]
+    })
+
+  div.software-card
+    div.software-card__inner
+      span.software-card__tag Тег карточки
+      h2.software-card__heading Заголовок
+    p.software-card__description Описание карточки с программным обеспечением
+    a.software-card__btn.btn(href="#")
+      svg(width=178, height=43, viewBox="0 0 178 43", fill="none", xmlns="http://www.w3.org/2000/svg")
+      span.btn__text Подробнее

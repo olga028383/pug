@@ -1,0 +1,19 @@
+//Здесь можно было и без передачи данных просто заменить ключами цикла 1,2,3. Использовала способ с передачей
+mixin hero-items(items)
+  each item in items
+    li.hero__item
+      .hero__label-wrapper
+        span.hero__number!=item.title
+        h2.hero__label!=item.subtitle
+      .hero__info-wrapper
+        p.hero__info!=item.text
+
+mixin hero(options)
+
+  .hero
+    .container
+      h1.hero__title!=options.title
+      p.hero__desciption!=options.description
+      ul.hero__list
+        +hero-items(options.items)
+

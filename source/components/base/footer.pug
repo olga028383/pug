@@ -1,0 +1,12 @@
+mixin footer(footerMods)
+  footer.footer(class=footerMods)
+    .container
+      .footer__wrapper
+        address.footer__address
+          | ООО Ракета, 2017-
+          span(data-year) 2022,
+          br
+          | из&nbsp;Санкт-Петербурга с&nbsp;любовью.
+        +logo({href: "#"}).footer__logo
+        +git-link().footer__git-link
+
